@@ -1,6 +1,5 @@
 <template>
     <div id="daily-habits">
-        <br>
         <ul v-for="(item,index) in dailyMaxims" :key="index">
             {{item}}
         </ul>
@@ -21,3 +20,11 @@
         }
     }
 </script>
+
+<style scoped>
+ ul {
+     font-size: 24px;
+     margin: 10px;
+
+ }
+</style>
