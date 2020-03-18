@@ -135,10 +135,10 @@
 
 <style scoped>
     button#gridbutton {
-        font-size: 24;
+        font-size: 16;
         width: 80%;
         color: black;
-        padding: 14px 15px;
+        padding: 6px 7px;
         margin: 8px 0;
         border: none;
         border-radius: 4px;

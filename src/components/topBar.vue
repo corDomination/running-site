@@ -27,35 +27,38 @@ export default {
 <style scoped>
 a {
     font-size: 30px;
-    color: white;
+    color: black;
     text-decoration: none;
-    border-radius: 6px;
-    border: 4px solid white;
+    border-radius: 20px;
+    border: 4px solid var(--primary);
     margin: 8px;
-    padding: 2px;
+    padding: 8px 30px;
+    background-color: rgb(204,204,204);
   }
   a:hover {
-    border-color: red;
+    color: blue;
+    border-color: blue;
+    background-color: rgb(222,222,222);
   }
 
   nav {
     color: whitesmoke;
     text-align: center;
     font-size: 48px;
-    background-color: black;
+    background-color: white;
     width: 100%;
-    border-top: 10px solid blue;
-    border-bottom: 10px solid blue;
+    border-bottom: 10px solid var(--primary);
+    margin-bottom:10px;
     padding-bottom: 20px;
+    padding-top:10px;
   }
   p#menutitle {
-    float: left;
     width: 100%;
-    margin: 8px 0;
+    margin: 0px 0;
     border: none;
-    font-size: 64px;
+    font-size: 48px;
     text-align: center;
     color: white;
-    background-color: black;
+    background-color: var(--primary);
   }
 </style>

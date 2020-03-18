@@ -1,30 +1,37 @@
 <template>
+<body>
   <div id="webpage">
     <top-bar>Jack's Running Site</top-bar>
-
-    <body>
       <div class="leftcolumn">
-        <div class="card">
-            <div id="minititle">Running Log</div>
-            <running-log></running-log>
+        <div class="card" id="daily-hab">
+          <div id="minititle">Daily Habits</div>
+          <daily-habits></daily-habits>
         </div>
+      </div>
+      <div class='middlecolumn'>
         <div class="card">
-            <div id="minititle">Daily Habits</div>
-            <daily-habits></daily-habits>
+          <div id="minititle">Beautiful Gettler Stadium</div>
+          <img src="@/assets/Gettler.jpg" alt="">
         </div>
       </div>
       <div class='rightcolumn'>
         <div class="card" id="pace-c">
-            <div id="minititle">Pace Calculator</div>
-            <pace-calculator></pace-calculator>
+          <div id="minititle">Pace Calculator</div>
+          <pace-calculator></pace-calculator>
         </div>
         <div class="card" id="log-e">
-            <div id="minititle">Log Entry</div>
-            <new-log-entry></new-log-entry>
+          <div id="minititle">Log Entry</div>
+          <new-log-entry></new-log-entry>
         </div>
       </div>
-    </body>
+      <div class='big-column'>
+        <div class="card">
+          <div id="minititle">Running Log</div>
+          <running-log></running-log>
+        </div>
+      </div>
   </div>
+</body>
 </template>
 
 <script>
@@ -43,8 +50,7 @@
       runningLog
     },
     data() {
-      return {
-      }
+      return {}
     },
     methods: {
       calcTotalSeconds: function (hour, minute, second) {
@@ -75,44 +81,69 @@
 
 <style>
   #app {
+    display:block;
     font-family: Helvetica, Arial, sans-serif;
     font-weight: 700;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
     margin-top: 60px;
   }
 
   html {
-    min-width: 1000px;
+    min-width: 1536px;
   }
 
-  body {
-    margin: 0;
+body{
+  height:100vh;
+  background-color:gainsboro;
+}
+  #webpage {
+    background-color: white;
+    float: left;
+    margin: 0 10%;
     text-align: center;
-    background: black;
-    /* background: linear-gradient(90deg, rgba(2,0,36,0.7959558823529411) 10%, rgba(9,47,121,0.9220063025210083) 51%, rgba(8,10,14,0.7903536414565826) 100%); */
+    border-color:grey;
+    border-width: 2px;
+    border-style: solid;
+  }
+
+  img {
+    width: 100%;
+    max-height:500px;
+    max-width: 810px;
   }
 
   .leftcolumn {
-    background-color: black;
     float: left;
-    width: 65%;
-    padding-left: 5%;
+    width: 14%;
+    margin: 0 1%;
+    height: 500px;
+  }
+
+  .middlecolumn {
+    float: left;
+    width: 55%;
+    margin: 0 1%;
+    height: 500px;
   }
 
   .rightcolumn {
-    background-color: black;
     width: 25%;
-    padding-right: 5%;
     float: left;
+    margin: 0 1%;
+    height: 500px;
   }
 
   .row:after {
     content: "";
     display: table;
     clear: both;
+  }
+
+  .big-column {
+    width: 100%;
+    float: left;
   }
 
   /* Style inputs */
@@ -144,29 +175,41 @@
 
   div#minititle,
   caption {
-    color: rgb(63, 71, 138);
-    font-size: 36px;
-    font-weight: 900;
-    background-color: white;
-    width: 100%;
+    color: white;
+    text-align: center;
+    border: outset;
+    border-width: 5px;
+    font-size: 32px;
+    font-weight: 100;
+    background-color: var(--primary);
+    margin: 0;
+    padding: 0;
   }
 
   .card {
-    background-color: rgb(143, 132, 132);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: rgb(204, 204, 204);
     transition: 0.3s;
-    margin: 12px 4px;
-    width: 98%;
+    margin-bottom: 20px;
+
   }
 
   /* On mouse-over, add a deeper shadow */
   .card:hover {
+    background-color: rgb(222, 222, 222);
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
-  #pace-c {
-    max-width: 300px;
-  }
+
+  #pace-c,
   #log-e {
-    max-width: 300px;
+    min-width: 280px;
   }
+
+  #daily-hab {
+  }
+
+  :root {
+  --primary: rgb(66, 78, 105);
+  --secondary: rgb(66, 78, 105);
+  --tertiary: rgb(66, 78, 105);
+}
 </style>

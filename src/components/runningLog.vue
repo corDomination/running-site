@@ -80,7 +80,8 @@
     }
 
     table#secondTable {
-        background-color: white;
+        background-color:grey;
+        border-collapse: collapse;
         display: block;
         overflow-y: scroll;
         overflow-x: hidden;
@@ -90,16 +91,14 @@
     }
 
     table#secondTable tr:nth-child(even) {
-        background-color: rgb(250, 221, 221);
+        background-color: rgb(199, 215, 247);
     }
 
     table#secondTable tr:nth-child(odd) {
-        background-color: rgb(248, 190, 190);
+        background-color: rgb(158, 162, 207);
     }
 
     table#secondTable th {
         text-align: center;
-        color: white;
-        background-color: black;
     }
 </style>

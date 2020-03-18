@@ -23,8 +23,10 @@
 
 <style scoped>
  ul {
-     font-size: 24px;
-     margin: 10px;
+     text-align: left;
+     font-size: 16px;
+     margin: 6px 0px;
+     padding: 2px 0px;
 
  }
 </style>
